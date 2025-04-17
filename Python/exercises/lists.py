@@ -10,7 +10,7 @@ movies.pop(1)
 movies.insert(1, "film8")
 
 #ex3
-print(movies[1])
+print(movies[::2]) # every second item
 print(movies[-3:])
 
 #ex4
@@ -31,23 +31,13 @@ students.append(["student5", 12, 'C'])
 print(students)
 
 #ex7
-numbers = list(range(1,11,1))
-squares = []
-print(numbers)
-for i in numbers:
-    if (i % 2) == 0:
-        square_number = i**2
-        squares.append(square_number)
+numbers = list(range(1,11))
+squares = [n**2 for n in numbers if n % 2 == 0]
 print(squares)
 
 #ex8
 names = ["Caio", "Pedro", "Thais", "Julia", "Bruno", "Alice", "Amanda"]
-new_list = []
-for i in names:
-    if 'a' in i:
-        new_list.append(i)
-    elif 'A' in i:
-        new_list.append(i)      
+new_list = [name for name in names if name.lower().startswith('a')]    
 print(new_list)
 
 #ex9
